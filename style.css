@@ -104,6 +104,11 @@ main{padding-top:58px}
 .page-head .inner{padding-block:4.5rem 2.5rem;display:grid;gap:1.2rem}
 .page-head h1{font-size:clamp(2.4rem,5vw,4rem)}
 .page-head h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+.page-head.with-media .inner{grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+.page-head-text{display:grid;gap:1.2rem;align-content:center}
+.head-photo{margin:0;display:grid;gap:.7rem}
+.head-photo img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.head-photo figcaption{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .page-head .lead{color:var(--muted);font-size:1.08rem;max-width:36rem}
 
 /* ---------- telefony (ramki) ---------- */
@@ -208,6 +213,7 @@ footer .logo{color:rgba(237,235,224,.55)}
   .hero .inner,.about .inner,.project-card,.contact .inner{grid-template-columns:1fr;gap:2.4rem}
   .hero .inner{padding-block:2rem 3rem}
   .portrait{aspect-ratio:4/5;order:-1}
+  .page-head.with-media .inner{grid-template-columns:1fr;gap:2rem}
   .door-grid,.offer-grid{grid-template-columns:1fr}
   .door-body{padding:1.4rem 1.4rem 1.6rem}
   .phones{gap:.7rem}
