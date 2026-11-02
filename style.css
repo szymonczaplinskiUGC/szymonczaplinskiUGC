@@ -65,7 +65,7 @@ main{padding-top:58px}
 .hero .lead{font-size:1.1rem;color:var(--muted);margin-top:1.6rem;max-width:30rem}
 .ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2.4rem}
 .portrait{aspect-ratio:4/5;overflow:hidden;background:var(--surface)}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .fade-up{animation:fadeUp 1s ease both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 
@@ -73,14 +73,15 @@ main{padding-top:58px}
 .doors .inner{padding-block:1rem 5rem}
 .doors h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:.6rem 0 1.6rem}
 .door-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-.door{position:relative;min-height:460px;overflow:hidden;background:var(--deep);color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end}
-.door video,.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
-.door:hover video,.door:hover img{transform:scale(1.04)}
-.door::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.74) 100%)}
-.door-body{position:relative;z-index:1;padding:2rem;display:grid;gap:.7rem}
+.door{position:relative;overflow:hidden;background:var(--deep);color:#fff;text-decoration:none;display:flex;flex-direction:column}
+.door-media{position:relative;aspect-ratio:1/1;overflow:hidden;background:#000}
+.door-media img,.door-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.door-media video{object-position:50% 28%}
+.door:hover .door-media img,.door:hover .door-media video{transform:scale(1.04)}
+.door-body{padding:1.8rem 2rem 2rem;display:grid;gap:.6rem;flex:1;align-content:start}
 .door .eyebrow{color:#E9D9B4}
 .door h3{font-size:clamp(2rem,3.4vw,2.8rem);color:#fff}
-.door p{color:rgba(255,255,255,.8);max-width:28rem;font-size:.98rem}
+.door p{color:rgba(255,255,255,.72);max-width:28rem;font-size:.98rem}
 .door .go{margin-top:.6rem;font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
 .door:hover .go{color:#E9D9B4}
 
@@ -207,9 +208,8 @@ footer .logo{color:rgba(237,235,224,.55)}
   .hero .inner,.about .inner,.project-card,.contact .inner{grid-template-columns:1fr;gap:2.4rem}
   .hero .inner{padding-block:2rem 3rem}
   .portrait{aspect-ratio:4/5;order:-1}
-  .portrait img{object-position:50% 38%}
   .door-grid,.offer-grid{grid-template-columns:1fr}
-  .door{min-height:380px}
+  .door-body{padding:1.4rem 1.4rem 1.6rem}
   .phones{gap:.7rem}
   .phones .phone-frame{border-radius:24px;padding:3px}
   .phones .phone-screen{border-radius:21px}
