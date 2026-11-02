@@ -206,7 +206,8 @@ footer .logo{color:rgba(237,235,224,.55)}
   .hamburger{display:flex}
   .hero .inner,.about .inner,.project-card,.contact .inner{grid-template-columns:1fr;gap:2.4rem}
   .hero .inner{padding-block:2rem 3rem}
-  .portrait{aspect-ratio:4/4.4;order:-1}
+  .portrait{aspect-ratio:4/5;order:-1}
+  .portrait img{object-position:50% 38%}
   .door-grid,.offer-grid{grid-template-columns:1fr}
   .door{min-height:380px}
   .phones{gap:.7rem}
