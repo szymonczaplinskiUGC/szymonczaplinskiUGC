@@ -135,6 +135,15 @@ main{padding-top:58px}
 .sound{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;background:none;border:1px solid var(--line);color:var(--muted);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:border-color .2s,color .2s}
 .sound:hover{border-color:var(--accent);color:var(--ink)}
 .sound svg{width:13px;height:13px;fill:currentColor}
+.latest-text{min-width:0}
+.scroll-cue{display:flex;align-items:center;gap:.9rem;margin-top:2rem;text-decoration:none;color:var(--accent);max-width:19rem}
+.scroll-cue-arrow{flex-shrink:0;width:42px;height:42px;border:1px solid var(--accent);border-radius:50%;display:grid;place-items:center;animation:cueBounce 2s ease-in-out infinite}
+.scroll-cue-arrow svg{width:18px;height:18px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.scroll-cue-text{font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;line-height:1.6}
+.scroll-cue:hover{color:var(--ink)}
+.scroll-cue:hover .scroll-cue-arrow{background:var(--accent)}
+.scroll-cue:hover .scroll-cue-arrow svg{stroke:#fff}
+@keyframes cueBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
 /* ---------- UGC: przewijana lista filmów ---------- */
 .videos{background:var(--surface);overflow:hidden}
@@ -225,7 +234,12 @@ footer .logo{color:rgba(237,235,224,.55)}
   .phones .phone-screen{border-radius:21px}
   .phones .play i{width:34px;height:34px}
   .latest .phone-frame{width:140px}
-  .latest .inner{gap:1.5rem}
+  .latest .inner{gap:1.2rem;flex-wrap:nowrap}
+  .latest h2{font-size:1.3rem;margin:.4rem 0 1rem}
+  .latest .eyebrow{font-size:.62rem;letter-spacing:.18em}
+  .scroll-cue{margin-top:1.4rem;gap:.7rem}
+  .scroll-cue-arrow{width:36px;height:36px}
+  .scroll-cue-text{font-size:.62rem;letter-spacing:.1em}
   .scroller-track{padding-inline:1.5rem}
   .offer-cta{padding:1.8rem}
 }
