@@ -73,16 +73,19 @@ main{padding-top:58px}
 .doors .inner{padding-block:1rem 5rem}
 .doors h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:.6rem 0 1.6rem}
 .door-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-.door{position:relative;overflow:hidden;background:var(--deep);color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;min-height:560px}
-.door-media{position:absolute;inset:0;background:#000}
-.door-media img,.door-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .8s ease}
+.door{position:relative;overflow:hidden;background:var(--deep);color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;min-height:460px}
+.door-media{position:absolute;inset:0;background:#000;overflow:hidden}
+.door-media img,.door-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
 .door-media video{object-position:50% 10%}
-.door:hover .door-media img,.door:hover .door-media video{transform:scale(1.04)}
-.door::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.78) 100%)}
-.door-body{position:relative;z-index:2;padding:2rem;display:grid;gap:.5rem}
+.door-media img.shift{object-position:50% 0;transform-origin:50% 0;transform:scale(1.2)}
+@media (min-width:520px) and (max-width:860px){.door-media img.shift{object-position:50% 38%;transform:none}}
+.door:hover .door-media video{transform:scale(1.04)}
+.door::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.74) 100%)}
+.door-body{position:relative;z-index:2;padding:2rem;display:grid;gap:.7rem}
 .door .eyebrow{color:#E9D9B4}
 .door h3{font-size:clamp(2rem,3.4vw,2.8rem);color:#fff}
-.door .go{margin-top:.5rem;font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.door p{color:rgba(255,255,255,.8);max-width:28rem;font-size:.98rem}
+.door .go{margin-top:.6rem;font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
 .door:hover .go{color:#E9D9B4}
 
 /* ---------- o mnie ---------- */
@@ -215,8 +218,7 @@ footer .logo{color:rgba(237,235,224,.55)}
   .portrait{aspect-ratio:4/5;order:-1}
   .page-head.with-media .inner{grid-template-columns:1fr;gap:2rem}
   .door-grid,.offer-grid{grid-template-columns:1fr}
-  .door{min-height:480px}
-  .door-body{padding:1.4rem 1.4rem 1.6rem}
+  .door{min-height:380px}
   .phones{gap:.7rem}
   .phones .phone-frame{border-radius:24px;padding:3px}
   .phones .phone-screen{border-radius:21px}
