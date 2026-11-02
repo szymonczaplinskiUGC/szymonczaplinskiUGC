@@ -79,7 +79,7 @@ main{padding-top:58px}
 .door-media video{object-position:50% 10%}
 .door-media img.shift{object-position:50% 0;transform-origin:50% 0;transform:scale(1.2)}
 @media (min-width:520px) and (max-width:860px){.door-media img.shift{object-position:50% 38%;transform:none}}
-@media (min-width:861px){.door-media img.shift{object-position:50% 100%;transform:none}.door-media video{object-position:50% 15%}}
+@media (min-width:861px){.door-media img.shift{object-position:50% 25%;transform:none}.door-media video{object-position:50% 28%}}
 .door:hover .door-media video{transform:scale(1.04)}
 .door::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.74) 100%)}
 .door-body{position:relative;z-index:2;padding:2rem;display:grid;gap:.7rem}
